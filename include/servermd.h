@@ -50,11 +50,15 @@ in this Software without prior written authorization from The Open Group.
 #define _SERVERMD_H_
 
 #ifndef VENDOR_RELEASE
-#define VENDOR_RELEASE 6600
+#define VENDOR_RELEASE 6700
 #endif
 
 #ifndef VENDOR_STRING
-#define VENDOR_STRING "The XFree86 Project (experimental version)"
+# if defined VENDORNAME
+#  define VENDOR_STRING VENDORNAME
+# else
+#  define VENDOR_STRING "X.Org Foundation"
+# endif
 #endif
 
 #ifndef DEFAULT_FS_PORT
