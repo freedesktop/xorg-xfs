@@ -196,7 +196,7 @@ WaitForSomething(int *pClientsReady)
 
 	if (current_time)	/* may not have been set */
 	    current_time = GetTimeInMillis();
-	for (i = 0; i < howmany(XFD_SETSIZE, NFDBITS); i++) {
+	for (i = 0; i < howmany(FD_SETSIZE, NFDBITS); i++) {
 	    while (clientsReadable.fds_bits[i]) {
 		curclient = ffs(clientsReadable.fds_bits[i]) - 1;
 		conn = ConnectionTranslation[curclient + (i << 5)];
