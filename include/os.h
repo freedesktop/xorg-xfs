@@ -105,7 +105,6 @@ extern	void	CloseSockets(void);
 extern	void	StopListening(void);
 
 /* os/daemon.c */
-extern	void	BecomeOrphan(void);
 extern	void	BecomeDaemon(void);
 
 /* os/error.c */

@@ -526,7 +526,6 @@ SetDaemonState(void)
     int	    oldpid;
 
     if (becomeDaemon) {
-	BecomeOrphan();
 	BecomeDaemon();
 	if ((oldpid = StorePid ())) {
 	    if (oldpid == -1)
